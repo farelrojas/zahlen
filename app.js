@@ -7,8 +7,6 @@ const availableNumbers = [
   97, 98, 99, 100
 ];
 
-  //https://media.thegermanproject.com/de/audio/lessons/14/01.mp3
-
 const numbersInGerman = {
   // Your numbersInGerman object here...
 };
@@ -35,7 +33,7 @@ function getRandomNumber() {
 }
 console.log(currentNumber)
 function playAudio(number) {
-      const audio = new Audio(`audio/${number}.mp3`);
+      const audio = new Audio(`${number}.mp3`);
       audio.play();
 }
 
@@ -99,13 +97,13 @@ buttons.forEach(button => {
           feedback.textContent = 'Correct!';
           feedback.style.color = 'green';
           score++;
-          const audioCorrect1 = new Audio(`audio/correct.mp3`);
+          const audioCorrect1 = new Audio(`correct.mp3`);
           audioCorrect1.play();
       } else {
           feedback.textContent = `Incorrect! The correct answer is ${currentNumber}.`;
           feedback.style.color = 'red';
           losses++;
-          const audioWrong = new Audio(`audio/wrong.mp3`);
+          const audioWrong = new Audio(`wrong.mp3`);
           audioWrong.play();
       }
       scoreDisplay.textContent = score;

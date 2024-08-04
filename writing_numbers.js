@@ -144,7 +144,7 @@ function getLastDigit(number) {
 }
 */
 function playAudio(number) {
-  const audio = new Audio(`audio/${number}.mp3`);
+  const audio = new Audio(`${number}.mp3`);
     audio.play();
 }
 /*
@@ -153,15 +153,15 @@ function playAudio(number) {
   unidad = getLastDigit(number);
 
   if (number < 21  || unidad === 0) {
-    const audio = new Audio(`audio/${number}.mp3`);
+    const audio = new Audio(`${number}.mp3`);
     audio.play();
   } else {
     if (number === 100) {
-      const audio = new Audio(`audio/100.mp3`);
+      const audio = new Audio(`100.mp3`);
    } else {
-    const audioOnes = new Audio(`audio/${unidad}.mp3`);
-    const und = new Audio(`audio/und.mp3`);
-    const audioTens = new Audio(`audio/${decimal}0.mp3`);
+    const audioOnes = new Audio(`${unidad}.mp3`);
+    const und = new Audio(`und.mp3`);
+    const audioTens = new Audio(`${decimal}0.mp3`);
 
     audioOnes.play();
     audioOnes.onended = function() {
@@ -209,13 +209,13 @@ function submitAnswer() {
     feedback.textContent = 'Correct!';
     feedback.style.color = 'green';
     score++;
-    const audioCorrect = new Audio(`audio/correct.mp3`);
+    const audioCorrect = new Audio(`correct.mp3`);
     audioCorrect.play();
   } else {
     feedback.textContent = `Incorrect! The correct answer is ${numbersInGerman[currentNumber]}.`;
     feedback.style.color = 'red';
     losses++;
-    const audioWrong = new Audio(`audio/wrong.mp3`);
+    const audioWrong = new Audio(`wrong.mp3`);
     audioWrong.play();
   }
   
@@ -230,5 +230,5 @@ window.onload = () => {
 };
 // Add event listener to go back button
 document.getElementById('go-back').addEventListener('click', () => {
-  window.location.href = 'learning_options.html';
+  window.location.href = 'index.html';
 });

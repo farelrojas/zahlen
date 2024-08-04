@@ -118,20 +118,20 @@ h1 {
   color: #333;
 }
 
-.learning_options {
+.index {
   margin-bottom: 20px;
 }
 
-.learning_options ul {
+.index ul {
   list-style: none;
   padding: 0;
 }
 
-.learning_options li {
+.index li {
   margin-bottom: 15px;
 }
 
-.learning_options a {
+.index a {
   display: block;
   padding: 15px 25px;
   font-size: 1.5em;
@@ -144,7 +144,7 @@ h1 {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.learning_options a:hover {
+.index a:hover {
   background-color: #007BFF;
   color: white;
   transform: scale(1.1);

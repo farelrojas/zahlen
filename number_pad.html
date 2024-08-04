@@ -169,7 +169,7 @@ function getLastDigit(number) {
 */
       function playAudio(currentNumber) {
         console.log(currentNumber)
-        const audio = new Audio(`audio/${currentNumber}.mp3`);
+        const audio = new Audio(`${currentNumber}.mp3`);
           audio.play();
       }
         /*
@@ -226,13 +226,13 @@ function getLastDigit(number) {
               feedback.textContent = 'Correct!';
               feedback.style.color = 'green';
               score++;
-              const audioCorrect = new Audio(`audio/correct.mp3`);
+              const audioCorrect = new Audio(`correct.mp3`);
               audioCorrect.play();
           } else {
               feedback.textContent = 'Incorrect! Try again.';
               feedback.style.color = 'red';
               losses++;
-              const audioWrong = new Audio(`audio/wrong.mp3`);
+              const audioWrong = new Audio(`wrong.mp3`);
               audioWrong.play();
           }
           scoreDisplay.textContent = score;
@@ -246,7 +246,7 @@ function getLastDigit(number) {
       };
       // Add event listener to go back button
       document.getElementById('go-back').addEventListener('click', () => {
-        window.location.href = 'learning_options.html';
+        window.location.href = 'index.html';
       });
   </script>
 </body>
